@@ -16,6 +16,16 @@ namespace IniGenerator
             LoadIni(filename);
         }
 
+        ~Ini()
+        {
+            Save();
+        }
+
+        public void Save()
+        {
+            IniFile.Save();
+        }
+
         protected void LoadIni(string filename)
         {
             if (!IniFile.FileExists)
